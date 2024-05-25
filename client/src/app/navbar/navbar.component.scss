@@ -1,0 +1,25 @@
+
+img{
+    max-height: 100px;
+    width: 100px;
+}
+.cart-no{
+    position: absolute;
+    font-size: 14px;
+    min-height: 25px;
+    min-width: 25px;
+    border-radius: 50%;
+    background: blue;
+    color: white;
+    text-align: center;
+    top: -12px;
+    right: 32px;
+}
+/* Adjust navigation links for smaller screens */
+@media (max-width: 768px) {
+    nav {
+      display: none; /* Hide navigation links */
+    }
+    /* Add CSS to display a menu icon and show/hide navigation links when clicked */
+  }
+  
