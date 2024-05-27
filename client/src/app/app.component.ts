@@ -1,8 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { error, log } from 'console';
-import { product } from './models/product';
-import { Pagination } from './models/pagination';
+
 
 @Component({
   selector: 'app-root',
@@ -11,20 +8,11 @@ import { Pagination } from './models/pagination';
 })
 export class AppComponent implements OnInit {
   title = 'Angular';
-  products: product[] = [];
 
-  constructor(private http : HttpClient){
+  constructor(){
 
   }
   ngOnInit(): void {
-    this.http.get<Pagination<product[]>>('https://localhost:5001/api/products?pageSize=50').subscribe({
-      next: response  => this.products = response.data,
-      error: error => console.log(error),
-      complete: () =>{
-        console.log('request completed');
-        console.log('extra statement');
-      }
-      
-    })
+   
   }
 }

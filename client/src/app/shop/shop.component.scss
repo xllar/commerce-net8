@@ -1,0 +1,31 @@
+img{
+    height: 225px;
+     width: 100%;
+     display: block;
+}
+.custom-card {
+    width: 16rem; /* Adjust the width as needed */
+    height: 22rem; /* Adjust the height as needed */
+  }
+  
+  .custom-card .card-img-top {
+    height: 10rem; /* Adjust the height of the image as needed */
+    object-fit: cover; /* Ensures the image covers the specified height */
+  }
+  
+  .custom-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 10rem); /* Ensure card-body fills the remaining space */
+  }
+  
+  .custom-card .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allow the text to wrap */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit the number of lines shown */
+    -webkit-box-orient: vertical;
+  }
+  
