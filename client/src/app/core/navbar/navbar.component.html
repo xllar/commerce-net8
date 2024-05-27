@@ -1,11 +1,11 @@
 <header class="d-flex align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom fixed-top shadow-sm">
   <a href="#">
-    <img src="/assets/images/logo.png" alt="logo"> <!-- Adjust width as needed -->
+    <img src="/assets/images/logo.png" class="logo" alt="logo" routerLink="/"> <!-- Adjust width as needed -->
   </a>
   <nav class="d-none d-md-block text-uppercase fs-4">
-    <a class="p-2 text-dark text-decoration-none fw-bold" href="#">Home</a>
-    <a class="p-2 text-dark text-decoration-none fw-bold" href="#">Shop</a>
-    <a class="p-2 text-dark text-decoration-none fw-bold" href="#">Support</a>
+    <a class="p-2 " routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a class="p-2 " routerLink="/shop" routerLinkActive="active" >Shop</a>
+    <a class="p-2 " routerLink="/contact" routerLinkActive="active" >Contact</a>
   </nav>
   <div class="d-flex align-items-center">
     <a href="" class="position-relative me-3">

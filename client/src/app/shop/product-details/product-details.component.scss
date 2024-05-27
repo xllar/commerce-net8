@@ -1,0 +1,55 @@
+/* General Styles */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p.text-muted {
+    font-size: 1.25rem;
+}
+
+.quantity-control {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: orange;
+    }
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: #6c757d;
+        color: #fff;
+    }
+}
+
+/* Description Section */
+.row.mt-4 {
+    h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mt-5 {
+        margin-top: 2rem !important;
+    }
+
+    .my-3 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+}

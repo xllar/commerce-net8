@@ -22,4 +22,18 @@ img{
     }
     /* Add CSS to display a menu icon and show/hide navigation links when clicked */
   }
+
+  a{
+    text-decoration: none;
+    color: #343a40;
+
+    &.active{
+      color: orange;
+
+      
+    }
+  }
   
+  .logo{
+    cursor: pointer;
+  }
