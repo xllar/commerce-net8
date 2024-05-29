@@ -1,1 +1,16 @@
-<p>home works!</p>
+<carousel [interval]="3000" [noPause]="true" [showIndicators]="true">
+    <slide *ngFor="let slide of slides">
+      <img [src]="slide.image" alt="slide" class="carousel-image">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{ slide.caption }}</h5>
+      </div>
+    </slide>
+  </carousel>
+  
+  <section class="featured">
+    <div class="d-flex justify-content-center pt-4">
+      <h1>Welcome to the Shop</h1>
+    </div>
+    <p class="text-center">Find the best products at the best prices</p>
+  </section>
+  

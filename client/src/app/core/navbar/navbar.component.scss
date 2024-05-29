@@ -1,39 +1,101 @@
+/* General Styles */
+header .logo {
+  max-width: 150px; /* Adjust as needed */
+}
 
-img{
-    max-height: 100px;
-    width: 100px;
+.cart-no {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0 5px;
+  font-size: 0.75rem;
 }
-.cart-no{
-    position: absolute;
-    font-size: 14px;
-    min-height: 25px;
-    min-width: 25px;
-    border-radius: 50%;
-    background: blue;
-    color: white;
-    text-align: center;
-    top: -12px;
-    right: 32px;
+
+header a {
+  text-decoration: none;
+  color: #343a40;
+  transition: color 0.3s ease;
 }
-/* Adjust navigation links for smaller screens */
+
+header a:hover {
+  color: orange;
+}
+
+header a.active {
+  color: orange;
+}
+
+header .btn-outline-secondary {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header .btn-outline-secondary:hover {
+  background-color: orange;
+  color: white;
+}
+
+header .fa-bars {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+header .fa-bars:hover {
+  transform: rotate(90deg);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: #f8f9fa;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  padding-top: 60px; /* Space for the header */
+}
+
+.mobile-menu.show {
+  display: block;
+  transform: translateX(0);
+}
+
+.mobile-menu nav a {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  color: #343a40;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobile-menu nav a:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    nav {
-      display: none; /* Hide navigation links */
-    }
-    /* Add CSS to display a menu icon and show/hide navigation links when clicked */
+  header {
+    flex-wrap: wrap;
   }
 
-  a{
-    text-decoration: none;
-    color: #343a40;
-
-    &.active{
-      color: orange;
-
-      
-    }
+  header .logo {
+    max-width: 120px; /* Adjust as needed */
   }
-  
-  .logo{
-    cursor: pointer;
+
+  header nav {
+    display: none;
   }
+
+  header .btn-outline-secondary {
+    font-size: 0.9rem; /* Adjust as needed */
+  }
+}
