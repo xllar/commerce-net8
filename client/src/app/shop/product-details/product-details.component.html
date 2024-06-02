@@ -1,21 +1,38 @@
-<div class="row" *ngIf="product">
-    <div class="col-12 col-md-6">
-        <img [src]="product.pictureUrl" [alt]="product.name" class="img-fluid w-100">
-    </div>
-    <div class="col-12 col-md-6 mt-5">
-        <h2>{{product.name}}</h2>
-        <p class="text-muted" style="font-size: 2em;">{{product.price | currency}}</p>
-        <div class="d-flex justify-content-start align-items-center my-3">
-            <i class="fa fa-minus-circle text-warning me-3 quantity-control"></i>
-            <span class="font-weight-bold fs-3 mx-2">2</span>
-            <i class="fa fa-plus-circle text-warning me-3 quantity-control"></i>
-            <div class="btn btn-outline-secondary ms-4">Add to cart</div>
+<div class="container">
+    <div class="row" *ngIf="product">
+        <div class="col-12 col-md-6">
+            <img [src]="product.pictureUrl" [alt]="product.name" class="img-fluid w-100">
         </div>
+        <div class="col-12 col-md-6 mt-5">
+            <h2>{{product.name}}</h2>
+            <p class="text-muted" style="font-size: 2em;">{{product.price | currency}}</p>
 
-        <div class="row mt-4">
-            <h4>Description</h4>
-            <p>{{product.description}}</p>
+            <h5 class="text-primary mb-3" *ngIf="quantityInBasket > 0">
+                You have {{quantityInBasket}} of this in your basket
+            </h5>
+            <div class="d-flex justify-content-start align-items-center my-3">
+                <i 
+                    (click)="decrementQuantity()"
+                    class="fa fa-minus-circle text-warning me-3 quantity-control" 
+                    style="cursor: pointer;"></i>
+
+                <span class="font-weight-bold fs-3 mx-2">{{quantity}}</span>
+
+                <i
+                    (click)="incrementQuantity()"
+                    class="fa fa-plus-circle text-warning me-3 quantity-control" 
+                    style="cursor: pointer;"></i>
+
+                <div
+                    (click)="updateBasket()" 
+                    [class.disabled]="quantity === quantityInBasket"
+                    class="btn btn-outline-primary ms-4">{{buttonText}}</div>
+            </div>
+
+            <div class="row mt-4">
+                <h4>Description</h4>
+                <p>{{product.description}}</p>
+            </div>
         </div>
     </div>
 </div>
-

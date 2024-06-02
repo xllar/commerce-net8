@@ -9,9 +9,11 @@
     <a class="p-2" routerLink="/test-error" routerLinkActive="active">Error</a>
   </nav>
   <div class="d-flex align-items-center">
-    <a href="#" class="position-relative me-3">
+    <a href="#" class="position-relative me-3" routerLink="/basket">
       <i class="fa fa-shopping-cart fa-lg text-dark"></i> <!-- Adjust size as needed -->
-      <div class="cart-no">5</div> <!-- Adjust font-size as needed -->
+      <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no">
+        {{getCount(basket.items)}}
+      </div> <!-- Adjust font-size as needed -->
     </a>
     <a href="#" class="btn btn-outline-secondary me-2 fw-bold">Login</a>
     <a href="#" class="btn btn-outline-secondary fw-bold">Sign up</a>
@@ -25,6 +27,12 @@
   <nav class="text-uppercase fs-4 p-3">
     <a class="d-block p-2" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
     <a class="d-block p-2" routerLink="/shop" routerLinkActive="active">Shop</a>
+    <a class="d-block p-2 position-relative" routerLink="/basket" routerLinkActive="active">
+      Cart
+      <div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no">
+        {{getCount(basket.items)}}
+      </div> <!-- Adjust font-size as needed -->
+    </a>
     <a class="d-block p-2" routerLink="/contact" routerLinkActive="active">Contact</a>
     <a class="d-block p-2" routerLink="/test-error" routerLinkActive="active">Error</a>
   </nav>
