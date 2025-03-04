@@ -13,3 +13,22 @@
     "no-inline-styles": "off"
   }
 }
+
+/**.    NEXT_PUBLIC_API_URL = https://api.stage.opendashboard.app/api/v1
+NEXT_PUBLIC_COLLAB_SERVICE_URL=https://collab-service.stage.opendashboard.app/
+NEXT_PUBLIC_COLLAB_SERVICE_HASH=ccHash12345
+NEXT_PUBLIC_BASE_URL=https://stage.opendashboard.app
+
+NEXT_PUBLIC_APPLICATION_ENV=stage
+
+NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyB5Yw8TjfhcTTYsTBM-mGvry7UKEmVRc4o
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=opendashboard-5ce77.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=opendashboard-5ce77
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=opendashboard-5ce77.firebasestorage.app
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=984921906680
+NEXT_PUBLIC_FIREBASE_APP_ID=1:984921906680:web:b9248b1d0ecbfb2c29ca0d
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=G-V99893EVB0
+NEXT_PUBLIC_FIREBASE_VAPID_KEY=BA8SwQccwiT84DJFSAGRBaP9DjMhnbFDotvTKUEh4QH0eEnw67Nq1BwmanS62H5FcRL2sA9MZQuqk1o44WYX0Mw***///
+
+
+then when u try to login, u will receive an email, if u click the button in the email it will take u to the staging site instead of back to the localhost, so what u do is, copy the link from the button instead of clicking it then just change the hostname to the localhost, that is www.stage.opendashboard.app/........ to http://localhost:3000/................
